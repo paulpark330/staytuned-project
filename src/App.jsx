@@ -11,10 +11,10 @@ function App() {
     <div className={styles.container}>
       <Header />
       <Routes>
-        <Route path="/" element={<Navigate replace to='/products' />} />
+        <Route path="/" element={<Navigate replace to="/products" />} />
         <Route path="/products" element={<Products />} />
         <Route path="/products/:productId" element={<ProductDetail />} />
-        <Route path='*' element={<NotFound />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
   );
