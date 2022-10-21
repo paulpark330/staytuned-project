@@ -21,6 +21,13 @@ const ProductDetail = () => {
     sendRequest(productId);
   }, [sendRequest, productId]);
 
+  const handleFormSubmit = async (event) => {
+    event.preventDefault();
+    const result = await fetch('http://localhost:9000/testAPI')
+    const data = await result.text()
+    console.log(data)
+  }
+
   if (status === "pending") {
     return (
       <div className={styles.container}>
@@ -37,6 +44,13 @@ const ProductDetail = () => {
       <div className={styles.product_detail}>
         <h3 className={styles.product_name}>{loadedProduct.name}</h3>
         <p className={styles.product_price}>{loadedProduct.price} USD</p>
+
+        <form className={styles.email_form} onSubmit={handleFormSubmit}>
+          <input className={styles.email_input} type="email" placeholder="enter your email" />
+          <button type="submit" className={styles.submit_button}>
+            subscribe
+          </button>
+        </form>
       </div>
     </div>
   );
