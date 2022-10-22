@@ -23,8 +23,8 @@ const ProductDetail = () => {
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
-    const result = await fetch('http://localhost:9000/testAPI')
-    const data = await result.text()
+    const result = await fetch('http://localhost:9000/products')
+    const data = await result.json();
     console.log(data)
   }
 
