@@ -12,7 +12,7 @@ router.get("/:id", async (req, res, next) => {
   const { id } = req.params;
   console.log('id', id);
   const product = await db.query(
-    `SELECT * FROM "staytuned"."products" WHERE id = ${id}`
+    `SELECT * FROM "staytuned"."products" WHERE product_id = ${id}`
   );
   res.status(200).json(product.rows[0]);
 });
