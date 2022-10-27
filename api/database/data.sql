@@ -11,6 +11,3 @@ VALUES
     ('super cedar', 'https://media-live.byredo.com/__live__/media/catalog/product/cache/c5a89872cc52c0f5e6106953800b3b5c/m/o/mob_supercedar_edp-50_c.jpg', 200),
     ('mixed emotions', 'https://media-live.byredo.com/__live__/media/catalog/product/cache/c5a89872cc52c0f5e6106953800b3b5c/p/r/product-page---packshot-50ml-1500x1680.jpg', 200),
     ('eyes closed', 'https://media-live.byredo.com/__live__/media/catalog/product/cache/c5a89872cc52c0f5e6106953800b3b5c/m/o/mob_eyes-closed-eau-de-parfum-50-ml_1.jpg', 200);
-
-
-SELECT * FROM "staytuned"."products";

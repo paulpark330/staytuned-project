@@ -1,7 +1,7 @@
-const FIREBASE_DOMAIN = "https://staytuned-project-default-rtdb.firebaseio.com";
+const DATABASE_URL = "http://localhost:9000";
 
 export const getProducts = async () => {
-  const response = await fetch(`${FIREBASE_DOMAIN}/productList.json`);
+  const response = await fetch(`${DATABASE_URL}/products`);
   const data = await response.json();
 
 
@@ -24,7 +24,7 @@ export const getProducts = async () => {
 
 export const getSingleProduct = async (productId) => {
   const response = await fetch(
-    `${FIREBASE_DOMAIN}/productList/${productId}.json`
+    `${DATABASE_URL}/products/${productId}`
   );
   const data = await response.json();
 

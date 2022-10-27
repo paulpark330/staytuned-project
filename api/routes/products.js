@@ -2,10 +2,19 @@ const express = require("express");
 const router = express.Router();
 const db = require("../db");
 
-router.get("/products", (req, res, next) => {
+router.get("/", async (req, res, next) => {
   console.log("req.query", req.query);
-  const allProducts = db.query("SELECT * FROM products");
-  res.json(allProducts.rows);
+  const allProducts = await db.query(`SELECT * FROM "staytuned"."products"`);
+  res.status(200).json(allProducts.rows);
+});
+
+router.get("/:id", async (req, res, next) => {
+  const { id } = req.params;
+  console.log('id', id);
+  const product = await db.query(
+    `SELECT * FROM "staytuned"."products" WHERE id = ${id}`
+  );
+  res.status(200).json(product.rows[0]);
 });
 
 module.exports = router;
