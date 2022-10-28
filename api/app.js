@@ -10,7 +10,7 @@ const subscriptionsRouter = require("./routes/subscriptions");
 const unsubscribeRouter = require("./routes/unsubscribe");
 
 const app = express();
-const emailService = require("./util/email");
+require("./util/email");
 
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
@@ -24,9 +24,9 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
-app.use("/products", productsRouter);
-app.use("/subscriptions", subscriptionsRouter);
-app.use("/unsubscribe", unsubscribeRouter);
+app.use("/api/products", productsRouter);
+app.use("/api/subscriptions", subscriptionsRouter);
+app.use("/api/unsubscribe", unsubscribeRouter);
 
 
 // catch 404 and forward to error handler

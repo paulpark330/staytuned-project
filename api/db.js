@@ -1,10 +1,10 @@
 const Pool = require("pg").Pool;
 
 const db = new Pool({
-  user: "paulpark",
-  host: "localhost",
-  port: 5432,
-  database: "staytuned",
+  connectionString:
+    process.env.DATABASE_URL ||
+    "postgresql://postgres:@localhost:5432/staytuned",
+  ssl: process.env.DATABASE_URL ? true : false,
 });
 
 module.exports = db;

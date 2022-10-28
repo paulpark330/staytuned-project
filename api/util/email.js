@@ -1,8 +1,8 @@
-const nodemailer = require('nodemailer');
-require('dotenv').config()
+const nodemailer = require("nodemailer");
+require("dotenv").config({ path: "../.env" });
 
 const transporter = nodemailer.createTransport({
-  host: 'smtp.gmail.com',
+  host: "smtp.gmail.com",
   port: 465,
   secure: true,
   auth: {
@@ -12,7 +12,8 @@ const transporter = nodemailer.createTransport({
 });
 
 const sendEmail = async (emailData) => {
-  const { email, name, priceDifference, productImg, subscriptionId } = emailData;
+  const { email, name, priceDifference, productImg, subscriptionId } =
+    emailData;
   const mailOptions = {
     from: "dev.paulpark@gmail.com",
     to: email,

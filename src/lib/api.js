@@ -1,4 +1,4 @@
-const DATABASE_URL = "http://localhost:9000";
+const DATABASE_URL = "http://localhost:9000/api";
 
 export const getProducts = async () => {
   const response = await fetch(`${DATABASE_URL}/products`);
