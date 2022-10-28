@@ -6,6 +6,7 @@ router.get("/", async (req, res) => {
   const result = await db.query(`SELECT * FROM "staytuned"."subscriptions"`);
   res.status(200).json(result.rows);
 });
+
 router.get("/:id", async (req, res) => {
   const { id } = req.params;
   const sql = `
