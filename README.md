@@ -1,5 +1,17 @@
 # StayTuned Project
 
+## Subscribing to a product
+
+![](https://github.com/paulpark330/staytuned-project/demo_1.gif)
+
+## Changing the price as an admin
+
+![](https://github.com/paulpark330/staytuned-project/demo_2.gif)
+
+## Subscription email and unsubscribing
+
+![](https://github.com/paulpark330/staytuned-project/demo_3.gif)
+
 Create `.env` in the root directory
 
 Follow instructions to [Sign in with App Passwords](https://support.google.com/accounts/answer/185833?hl=en) to connect your Gmail.
