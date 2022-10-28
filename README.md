@@ -10,9 +10,11 @@ PASSWORD=<App Password>
 API_URL="http://localhost:9000/api"
 ```
 ## Frontend 
+
 Run `npm i` in both the root directory and run `npm run start`
 
 
 ## Backend
+
 `cd` into the `api` directory and run `npm i` and run `npm run start`
 
