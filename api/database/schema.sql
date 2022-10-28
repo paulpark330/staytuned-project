@@ -18,6 +18,7 @@ CREATE TABLE "staytuned"."subscriptions"(
     "product_id" INT NOT NULL,
     "created_at" TIMESTAMPTZ(6) NOT NULL DEFAULT NOW(),
     "updated_at" TIMESTAMPTZ(6) NOT NULL DEFAULT NOW(),
+    UNIQUE ("email", "product_id"),
     CONSTRAINT "subscriptions_pk" PRIMARY KEY ("subscription_id")
 );
 

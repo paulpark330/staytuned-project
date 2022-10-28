@@ -7,8 +7,8 @@ const ProductList = ({ products }) => {
     <ul className={styles.container}>
       {products.map((product) => (
         <ProductItem
-          key={product.id}
-          id={product.id}
+          key={product.product_id}
+          id={product.product_id}
           name={product.name}
           price={product.price}
           img={product.img}
