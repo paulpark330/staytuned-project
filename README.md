@@ -2,15 +2,15 @@
 
 ## Subscribing to a product
 
-![](https://github.com/paulpark330/staytuned-project/demo_1.gif)
+![](https://github.com/paulpark330/staytuned-project/blob/master/demo_1.gif)
 
 ## Changing the price as an admin
 
-![](https://github.com/paulpark330/staytuned-project/demo_2.gif)
+![](https://github.com/paulpark330/staytuned-project/blob/master/demo_2.gif)
 
 ## Subscription email and unsubscribing
 
-![](https://github.com/paulpark330/staytuned-project/demo_3.gif)
+![](https://github.com/paulpark330/staytuned-project/blob/master/demo_3.gif)
 
 Create `.env` in the root directory
 
