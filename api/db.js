@@ -1,10 +1,11 @@
 const Pool = require("pg").Pool;
+require("dotenv").config({ path: "../.env" });
 
 const db = new Pool({
-  connectionString:
-    process.env.DATABASE_URL ||
-    "postgresql://postgres:@localhost:5432/staytuned",
-  ssl: process.env.DATABASE_URL ? true : false,
+  connectionString: process.env.DATABASE_URL,
+  ssl: {
+    rejectUnauthorized: false,
+  },
 });
 
 module.exports = db;

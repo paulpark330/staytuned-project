@@ -15,7 +15,7 @@ const sendEmail = async (emailData) => {
   const { email, name, priceDifference, productImg, subscriptionId } =
     emailData;
   const mailOptions = {
-    from: "dev.paulpark@gmail.com",
+    from: process.env.EMAIL,
     to: email,
     subject: `The price of ${name} has dropped by ${priceDifference} USD!`,
     html: `
